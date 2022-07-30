@@ -1,4 +1,21 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 /*
         Khởi tạo các biến chứa giá tri(variables) và hàm trong scss cho phep them cac gia tri mac dinh cua tham so (mixin) 
 */
