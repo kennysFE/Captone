@@ -139,96 +139,160 @@ header{
 }
 
 // Feature section
-.feature {
-    padding: 3rem 0;
+// .feature {
+//     padding: 3rem 0;
 
+//     .container {
+//         .section-title {
+
+//             text-align: center;
+//             margin-bottom: 5.5rem;
+//         }
+
+//         .products-list {
+//             .row {
+//                 .col-item {
+//                     margin-bottom: 3rem;
+//                     padding: 0 2rem;
+
+//                     .product-card {
+//                         background-color: $bg-c2-light;
+//                         margin: 0 1.5rem;
+
+//                         .card-img {
+//                             text-align: center;
+
+//                             img {
+//                                 object-fit: cover;
+//                             }
+//                         }
+
+//                         .card-body {
+//                             padding: 30px;
+//                             line-height: 1;
+
+//                             h3 {
+//                                 @include textindex(1.5rem, $text-light, $text-c1-dark);
+//                                 margin-bottom: 0.5rem;
+//                                 overflow: hidden;
+//                                 text-overflow: ellipsis;
+//                                 display: -webkit-box;
+//                                 -webkit-line-clamp: 1;
+//                                 line-clamp: 1;
+//                                 -webkit-box-orient: vertical;
+//                             }
+
+//                             p {
+//                                 @include textindex($text-2xl, $text-light, #CBC9C9);
+//                                 margin-bottom: 0.9rem;
+//                                 overflow: hidden;
+//                                 text-overflow: ellipsis;
+//                                 display: -webkit-box;
+//                                 -webkit-line-clamp: 2;
+//                                 line-clamp: 2;
+//                                 -webkit-box-orient: vertical;
+
+//                             }
+
+//                             .price-wrap {
+//                                 background-color: $bg-c4-light;
+
+//                                 .btn-primary-cus {
+//                                     padding: 18px 35px;
+
+//                                     @include res-sm {
+//                                         padding: 1em 1.5em;
+//                                     }
+
+//                                     ;
+
+//                                     // span {}
+//                                 }
+
+//                                 .price {
+//                                     @include textindex(1.5rem, $text-semiBold, $text-c1-dark);
+//                                     text-align: center;
+//                                     flex: 1;
+
+//                                 }
+//                             }
+
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//         #add-more-btn{
+//             padding: 15px 20px;
+
+//         }
+//     }
+// }
+
+.productRelate {
+    margin-top: 55px;
     .container {
-        .section-title {
-
-            text-align: center;
-            margin-bottom: 5.5rem;
-        }
-
-        .products-list {
-            .row {
-                .col-item {
-                    margin-bottom: 3rem;
-                    padding: 0 2rem;
-
-                    .product-card {
-                        background-color: $bg-c2-light;
-                        margin: 0 1.5rem;
-
-                        .card-img {
-                            text-align: center;
-
-                            img {
-                                object-fit: cover;
-                            }
-                        }
-
-                        .card-body {
-                            padding: 30px;
-                            line-height: 1;
-
-                            h3 {
-                                @include textindex(1.5rem, $text-light, $text-c1-dark);
-                                margin-bottom: 0.5rem;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                display: -webkit-box;
-                                -webkit-line-clamp: 1;
-                                line-clamp: 1;
-                                -webkit-box-orient: vertical;
-                            }
-
-                            p {
-                                @include textindex($text-2xl, $text-light, #CBC9C9);
-                                margin-bottom: 0.9rem;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                display: -webkit-box;
-                                -webkit-line-clamp: 2;
-                                line-clamp: 2;
-                                -webkit-box-orient: vertical;
-
-                            }
-
-                            .price-wrap {
-                                background-color: $bg-c4-light;
-
-                                .btn-primary-cus {
-                                    padding: 18px 35px;
-
-                                    @include res-sm {
-                                        padding: 1em 1.5em;
-                                    }
-
-                                    ;
-
-                                    // span {}
-                                }
-
-                                .price {
-                                    @include textindex(1.5rem, $text-semiBold, $text-c1-dark);
-                                    text-align: center;
-                                    flex: 1;
-
-                                }
-                            }
-
-                        }
-                    }
-                }
+      padding-left: 100px;
+      h2 {
+        @include text($text-4xl, $text-regular);
+      }
+      .prodItem {
+        margin-top: 89px;
+        .prodCard {
+          margin-bottom: 47px;
+          .card {
+            border: none;
+            width: 350px;
+          height: 400px;
+            background-color: $bg-c2-light;
+            img {
+              width: 220px;
+              height: 170px;
+              margin: auto;
             }
+            .name {
+              @include text($text-24xl, $text-light);
+              line-height: 29px;
+              padding-left: 23px;
+            }
+            .shortDes {
+              @include text($text-2xl, $text-light);
+              line-height: 24px;
+              padding-left: 23px;
+              color: $text-c3-light;
+            }
+            .cardFooter {
+              display: flex;
+              align-items: center;
+              a{
+                width: 50%;
+                .buyProd {
+                  width: 100%;
+                  border: none;
+                  height: 64px;
+                  background-color: $bg-c1-brown;
+                  @include text($text-24xl, $text-extraLight);
+                  &:hover{
+                    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.58);
+                  }
+                }
+              }
+              .priceItem {
+                width: 50%;
+                height: 64px;
+                margin: 0;
+                @include text($text-24xl, $text-semiBold);
+                background-color: $bg-c4-light;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
         }
-        #add-more-btn{
-            padding: 15px 20px;
-
-        }
+      }
     }
 }
-
 footer {
     margin-top: 106px;
     .footer-top {
