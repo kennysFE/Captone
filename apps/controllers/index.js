@@ -1,8 +1,3 @@
-// import {Cart} from '../../models/Cart.js';
-// import Product from '../../models/Product.js';
-
-//get all products
-
 window.onload=function () {
     getAllProducts();
 }
