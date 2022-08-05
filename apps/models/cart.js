@@ -1,3 +1,4 @@
+// Khởi tạo lớp đối tượng Cart
 export class Cart {
     arrProducts = [];
     totalCount=function () {
@@ -49,8 +50,3 @@ export class Cart {
         this.saveProductLocalStorage();
     }
 }
-
-
-
-
-// let check= 

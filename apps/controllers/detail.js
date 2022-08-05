@@ -56,7 +56,7 @@ let renderView = (product) => {
     price.innerHTML = product.price + '$';
 }
 
-//increase the number of products
+//tăng sản phẩm
 document.querySelector("#upItem").onclick = () => {
     let toggle = document.querySelector('.toggle');
     let count = document.querySelector("#countItem");
@@ -75,7 +75,7 @@ document.querySelector("#upItem").onclick = () => {
 
 }
 
-//reduce the number of products
+//giảm sản phẩm
 document.querySelector("#downItem").onclick = () => {
     let count = document.querySelector("#countItem");
     let currentCount = Number(count.innerHTML);
@@ -88,7 +88,7 @@ document.querySelector("#downItem").onclick = () => {
     count.innerHTML = currentCount;
 }
 
-//render relatedProduct
+//render lại các sản phẩm 
 let renderRelatedProducts = (product) => {
     let relatedProducts = product.relatedProducts;
     let htmlRelatedProducts = '';
@@ -116,7 +116,7 @@ let renderRelatedProducts = (product) => {
     document.querySelector("#relateProduct").innerHTML = htmlRelatedProducts;
 }
 
-//display the view mode 
+//Hiển thị lại chế độ xem 
 window.buyNow = (id) => {
     getByIDProduct(id);
     document.body.scrollTop = 0;
@@ -177,7 +177,7 @@ document.querySelector('#btnAddToCart').onclick = () => {
     
 }
 
-//Show product information on cart
+//Hiển thị các thông tin của sản phẩm lên cart -shopping
 document.querySelector('#displayBtnCart').onclick = () => {
     document.querySelector('#numberItem').innerHTML = `(${cart.totalCount()})`;
     renderModal();
@@ -185,7 +185,7 @@ document.querySelector('#displayBtnCart').onclick = () => {
 }
 
 
-//render the modal
+//render lại model
 let renderModal = () => {
     let htmlContent = '';
     for (let prod of cart.arrProducts) {
@@ -222,7 +222,6 @@ let renderModal = () => {
 }
 
 
-//modal button down 
 window.modalDown = (id, count, size) => {
     if (count > 1) {
         count -= 1;
@@ -238,7 +237,6 @@ window.modalDown = (id, count, size) => {
     document.querySelector('#numberItem').innerHTML = `(${cart.totalCount()})`;
 }
 
-//modal button up
 window.modalUp = (id, count, size) => {
 
     if (count <= product.quantity) {
@@ -258,7 +256,7 @@ window.modalUp = (id, count, size) => {
 
 }
 
-//delete product
+//Xoá sản phẩm
 window.deleteProd = (id, size) => {
     let index = cart.arrProducts.findIndex(item => item.id == id && item.size == size);
     cart.arrProducts.splice(index, 1);
@@ -268,7 +266,7 @@ window.deleteProd = (id, size) => {
 }
 
 
-//delete All Products in cart.arrProducts
+//Hàm xoá tất cả các sản phẩm ra khỏi giỏ hàng 
 document.querySelector('#deleteAll').onclick=()=>{
     cart.arrProducts=[];
     cart.saveProductLocalStorage();

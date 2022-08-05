@@ -342,7 +342,6 @@ body {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: $bg-c1-red;
     cursor: pointer;
     border-radius:10px;
     &:hover {
@@ -367,7 +366,7 @@ body {
     }
   }
   .ontop:hover {
-    background:$bg-c2-linear;
+    background:$bg-c1-brown;
   }
   .ontop:hover .top { 
     border: none;
@@ -376,7 +375,7 @@ body {
   }
   
   .activeSize{
-    background-color:red;
+    background-color:$bg-c1-brown;
   }
   
   

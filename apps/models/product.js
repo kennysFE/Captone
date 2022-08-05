@@ -1,3 +1,4 @@
+// khởi tạo lớp đối tượng Product
 export default class Product{
     id=0;
     name='';

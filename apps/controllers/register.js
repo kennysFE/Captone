@@ -1,11 +1,11 @@
 import { Customers } from '../models/customers.js';
 import { checkEmail, checkEmpty, checkPassword, checkNumber, checkName, checkLength } from '../util/validation.js';
-// checked by input radio 
+// tạo biến lây các giá trị 
 let inputMale = document.querySelector('#male');
 let inputFemale = document.querySelector('#female');
-
+// Sử dụng kĩ thuật đặt cờ hiệu gán giá trị mặc định đúng cho gender
 let gender = 'male';
-//get input gender
+//Lấy các giá trị từ gender
 inputMale.onclick = function (e) {
     gender = inputMale.id;
 }
@@ -14,7 +14,7 @@ inputFemale.onclick = function (e) {
 }
 
 let user = new Customers();
-//get input by tag input
+//Kiểm tra gender
 document.querySelector('#submit').onclick = (e) => {
     e.preventDefault();
     let arrInput = document.querySelectorAll('.form-group input');
@@ -29,7 +29,7 @@ document.querySelector('#submit').onclick = (e) => {
     }
     validationError(user);
 }
-//validation error
+//validation 
 let validationError = (user) => {
     let arrOutputValidation = document.querySelectorAll('.form-group div');
     let validation = true;
@@ -92,7 +92,7 @@ let validationError = (user) => {
     }
 }
 
-//sign up user
+//sumit user
 let singUp = (user) => {
     let promises = axios({
         url: 'https://shop.cyberlearn.vn/api/Users/signup',
