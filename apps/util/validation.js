@@ -66,7 +66,7 @@ export let checkEmail = (value, selectorError, name) =>{
         document.querySelector(selectorError).innerHTML = '';
         return true;
     } else {
-        document.querySelector(selectorError).innerHTML = name + ' không đúng định dạng example: abc@gamil.com';
+        document.querySelector(selectorError).innerHTML = name + ' không đúng định dạng example: abc@gmail.com';
         return false;
     }
 }
